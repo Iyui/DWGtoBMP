@@ -80,7 +80,7 @@ namespace DWG2BMP
                         BMPF.Seek(0, SeekOrigin.Begin); //指针移到文件开始处
 
                         myImg = Image.FromStream(BMPF); //创建位图文件对象
-                        myImg.Save("BMPFileName");////位图文件另存为
+                        myImg.Save(BMPFileName);////位图文件另存为
                         bmpr.Close();
                         BMPF.Close();
                     }
