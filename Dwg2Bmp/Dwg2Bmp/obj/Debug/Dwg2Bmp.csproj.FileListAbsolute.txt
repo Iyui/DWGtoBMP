@@ -1,0 +1,9 @@
+E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Debug\Dwg2Bmp.csprojAssemblyReference.cache
+E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Debug\Dwg2Bmp.Form1.resources
+E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Debug\Dwg2Bmp.Properties.Resources.resources
+E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Debug\Dwg2Bmp.csproj.GenerateResource.cache
+E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Debug\Dwg2Bmp.csproj.CoreCompileInputs.cache
+E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\bin\Debug\Dwg2Bmp.exe
+E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\bin\Debug\Dwg2Bmp.pdb
+E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Debug\Dwg2Bmp.exe
+E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Debug\Dwg2Bmp.pdb
