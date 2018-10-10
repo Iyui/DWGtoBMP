@@ -6,3 +6,4 @@ E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Release\Dwg2Bmp.csproj.GenerateResource.cache
 E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Release\Dwg2Bmp.csproj.CoreCompileInputs.cache
 E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Release\Dwg2Bmp.exe
 E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Release\Dwg2Bmp.pdb
+E:\GakkiGit\Dwg2Bmp\Dwg2Bmp\obj\Release\Dwg2Bmp.csprojAssemblyReference.cache

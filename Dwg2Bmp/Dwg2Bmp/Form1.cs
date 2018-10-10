@@ -14,8 +14,13 @@ namespace Dwg2Bmp
 {
     public partial class Form1 : Form
     {
-        //private bool bShiftSorF = false;
-        //private bool bGetFilePath = false;
+        private string sDwgPath;
+
+        private string sOpenDWGPath(string sOpenFilePath)//暂时不知道怎么用，先留着
+        {
+            return sOpenFilePath;
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -34,14 +39,20 @@ namespace Dwg2Bmp
 #endif
 
         }
-
-        private void OpenFileFormat()
+        /// <summary>
+        /// 获取DWG文件位置
+        /// </summary>
+        private string OpenFilePath()
         {
             ViewDWG dv = new ViewDWG();
             string sGetFilePath = this.sGetDWGFilePath();
             lFilePath.Text = sGetFilePath;
+            return sGetFilePath;
         }
 
+        /// <summary>
+        /// DWG转换为bmp/jpg格式
+        /// </summary>
         private void ShiftFileFormat()
         {
             //string sGetFilePath;
@@ -49,8 +60,9 @@ namespace Dwg2Bmp
             {
                 ViewDWG dv = new ViewDWG();
                 string sFilePath = lFilePath.Text.Substring(0, lFilePath.Text.LastIndexOf("\\"));
-                string sGetPicPath = sFilePath + Path.GetFileNameWithoutExtension(lFilePath.Text) + ".bmp";
-                dv.GetDwgImage(lFilePath.Text, sGetPicPath);
+
+                string sGetPicName = Path.GetFileNameWithoutExtension(lFilePath.Text) + ".bmp";
+                dv.GetDwgImage(lFilePath.Text, tbOutputPath.Text + "\\" + sGetPicName);
                 MessageBox.Show("转换成功");
             }
             catch (Exception ex)
@@ -81,7 +93,7 @@ namespace Dwg2Bmp
                 //获取文件名，不带路径
                 //fileNameExt = localFilePath.Substring(localFilePath.LastIndexOf("\\") + 1);
                 //获取文件路径，不带文件名
-                //FilePath = localFilePath.Substring(0, localFilePath.LastIndexOf("\\"));
+                sDwgPath = sOpenDWGPath(localFilePath.Substring(0, localFilePath.LastIndexOf("\\")));
                 //给文件名前加上时间
                 //newFileName = DateTime.Now.ToString("yyyyMMdd") + fileNameExt;
                 //在文件名里加字符
@@ -97,12 +109,29 @@ namespace Dwg2Bmp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileFormat();
+            OpenFilePath();
+            tbOutputPath.Text = sDwgPath;
         }
 
         private void btShiftFormat_Click(object sender, EventArgs e)
         {
             ShiftFileFormat();
+        }
+
+        private void btOutPutPath_Click(object sender, EventArgs e)
+        {
+            tbOutputPath.Text = SelectPath();
+        }
+
+        /// <summary>
+        /// 弹出一个选择目录的对话框
+        /// </summary>
+        /// <returns></returns>
+        private string SelectPath() 
+        {
+            FolderBrowserDialog path = new FolderBrowserDialog();
+            path.ShowDialog();
+            return path.SelectedPath;
         }
     }
 }
